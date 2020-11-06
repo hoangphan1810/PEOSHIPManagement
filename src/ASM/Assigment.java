@@ -6,7 +6,10 @@
 	Oct 1st, 2020
 */
 package ASM;
-
+/**
+ *
+ * @author Hoang Phan
+ */
 
 public class Assigment {
 
