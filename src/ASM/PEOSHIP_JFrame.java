@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
  */
 package ASM;
 
@@ -19,12 +17,12 @@ import jdk.nashorn.internal.runtime.regexp.joni.exception.JOniException;
  * @author Hoang Phan
  */
 public class PEOSHIP_JFrame extends javax.swing.JFrame {
-    ArrayList<PEOSHIP_Managerment> lisNV=new ArrayList<>();
-    int vitri;
+    ArrayList<PEOSHIP_Managerment> lisUID=new ArrayList<>();
+    int position;
     DefaultTableModel model=new DefaultTableModel();
 
     /**
-     * Creates new form HP
+     * Creates new form Hoang Phan
      */
     public PEOSHIP_JFrame() {
         initComponents();
@@ -333,39 +331,39 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
 
     private void btndauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndauActionPerformed
         try {
-            vitri=0;
-            display(vitri);
+            position=0;
+            display(position);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "error 1 "+e);
+            JOptionPane.showMessageDialog(null, "you get error"+e);
         }
     }//GEN-LAST:event_btndauActionPerformed
 
     private void btncuoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncuoiActionPerformed
          try {
-            vitri=lisNV.size()-1;
-            display(vitri);
+            position=lisUID.size()-1;
+            display(position);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "erro1 2"+e);
+            JOptionPane.showMessageDialog(null, "you get error"+e);
         }
     }//GEN-LAST:event_btncuoiActionPerformed
 
     private void btnluiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnluiActionPerformed
         try {
-            if(vitri>0){
-            vitri--;
-            display(vitri);}
+            if(position>0){
+            position--;
+            display(position);}
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "error 3"+e);
+            JOptionPane.showMessageDialog(null, "you get error"+e);
         }
     }//GEN-LAST:event_btnluiActionPerformed
 
     private void btntienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntienActionPerformed
          try {
-            if(vitri<lisNV.size()-1){
-            vitri++;
-            display(vitri);}
+            if(position<lisUID.size()-1){
+            position++;
+            display(position);}
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "error 4"+e);
+            JOptionPane.showMessageDialog(null, "you get error"+e);
         }
     }//GEN-LAST:event_btntienActionPerformed
 
@@ -377,8 +375,8 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         try {
             int row=jTable1.getSelectedRow();
             if(row>=0){
-                vitri=row;
-                display(vitri);
+                position=row;
+                display(position);
             }
             
         } catch (Exception e) {
@@ -394,63 +392,63 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         
         try {
            
-            FileOutputStream out = new FileOutputStream("thongtin.txt");
+            FileOutputStream out = new FileOutputStream("PEOSHIP_UID.txt");
 
              out.close();
         } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "error 5"+e);
+             JOptionPane.showMessageDialog(null, "you get error"+e);
         }
     }//GEN-LAST:event_btnsaveActionPerformed
 
     private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
        
         try{
-            if(lisNV.isEmpty()){
-            JOptionPane.showMessageDialog(null, "error 6");
+            if(lisUID.isEmpty()){
+            JOptionPane.showMessageDialog(null, "still want to delete ?");
             return;
         }
         
         int n=JOptionPane.showConfirmDialog(null, "sure want to delete");
         if(n==0){
-            lisNV.remove(vitri);
+            lisUID.remove(position);
             addTable();
-             JOptionPane.showMessageDialog(null, "finish delete");
+             JOptionPane.showMessageDialog(null, "done delete");
         }
-        if(lisNV.isEmpty()){
+        if(lisUID.isEmpty()){
             xoatrang();
         }else{
-            vitri=0;
-            display(vitri);
+            position=0;
+            display(position);
         }
         }
         catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "error"+e);
+             JOptionPane.showMessageDialog(null, "you get error"+e);
         }
     }//GEN-LAST:event_btndeleteActionPerformed
 
     private void btnfindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfindActionPerformed
-       String ma=JOptionPane.showInputDialog("find ");
+       String ma=JOptionPane.showInputDialog("new sign in ");
         try {
 
             boolean kq=false;
-            for(PEOSHIP_Managerment x:lisNV){
+            for(PEOSHIP_Managerment x:lisUID){
                 if(x.getUID().equalsIgnoreCase(ma)){
-                    vitri=lisNV.indexOf(x);
-                    display(vitri);
+                    position=lisUID.indexOf(x);
+                    display(position);
                     kq=true;
                     
                     break;   
                 }
             }
             if(!kq){
-                JOptionPane.showMessageDialog(null, "Không tìm thấy nhân viên có mã:  "+ma);
+                JOptionPane.showMessageDialog(null, "cannot find this UID:  "+ma);
             }
             else{
-                 JOptionPane.showMessageDialog(null, "UID "+ma);
+                 JOptionPane.showMessageDialog(null, "UID here:"+ma);
             }
             xoatrang();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Gặp lỗi rồi bạn ơi!!!"+e);
+            JOptionPane.showMessageDialog(null, " you get error"+e);
         }
     }//GEN-LAST:event_btnfindActionPerformed
 
@@ -458,7 +456,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         
          try {
             // TODO add your handling code here:
-            FileInputStream in = new FileInputStream("thongtin.txt");
+            FileInputStream in = new FileInputStream("PEOSHIP_UID.txt");
             int size=in.available();
             byte[] buffer=new byte[size];
             in.read(buffer);
@@ -478,15 +476,15 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             int tuoi=Integer.parseInt(tftuoi.getText());
             double luong=Double.parseDouble(tfluong.getText());
             
-            lisNV.add(new PEOSHIP_Managerment(ma, hoten, email, tuoi, luong));
+            lisUID.add(new PEOSHIP_Managerment(ma, hoten, email, tuoi, luong));
             
       
             model.addRow(new Object[] {ma,hoten,tuoi,email, luong});
-            vitri=lisNV.size()-1;
-            display(vitri);
+            position=lisUID.size()-1;
+            display(position);
         } 
         catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "Gặp lỗi rồi bạn ơi!!!"+e);
+             JOptionPane.showMessageDialog(null, "you get error"+e);
         }
             
             
@@ -499,22 +497,22 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
 
     private void btnexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexitActionPerformed
        try {
-          int hoi=JOptionPane.showConfirmDialog(null, "Bạn có muốn thoát thật không??");
+          int hoi=JOptionPane.showConfirmDialog(null, "sure want to delete");
           if(hoi==0){
             FileOutputStream fos = new FileOutputStream("a.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
             
-            oos.writeObject(lisNV);
+            oos.writeObject(lisUID);
             
             oos.flush();
             fos.flush();
             oos.close();
             fos.close();
-            JOptionPane.showMessageDialog(null, "Bạn đã lưu thành công");
+            JOptionPane.showMessageDialog(null, "saved");
           }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Gap loi: " + e);
+            JOptionPane.showMessageDialog(null, "error: " + e);
         }
         System.exit(0);
     }//GEN-LAST:event_btnexitActionPerformed
@@ -587,19 +585,19 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void display(int vitri) {
-       tfmanv.setText(lisNV.get(vitri).getUID());
-       tfhoten.setText(lisNV.get(vitri).getProgram());
-       tfemail.setText(lisNV.get(vitri).getDescription());
-       tftuoi.setText(lisNV.get(vitri).getCODE()+"");
-       tfluong.setText(lisNV.get(vitri).getAmount_Provided()+"");
+       tfmanv.setText(lisUID.get(vitri).getUID());
+       tfhoten.setText(lisUID.get(vitri).getProgram());
+       tfemail.setText(lisUID.get(vitri).getDescription());
+       tftuoi.setText(lisUID.get(vitri).getCODE()+"");
+       tfluong.setText(lisUID.get(vitri).getAmount_Provided()+"");
        
-       jbhientai.setText("Record "+(vitri+1)+" of "+ lisNV.size());
+       jbhientai.setText("Record "+(vitri+1)+" of "+ lisUID.size());
        jTable1.setRowSelectionInterval(vitri, vitri);
     }
 
     private void addTable() {
         model.setRowCount(0);
-        for(PEOSHIP_Managerment x:lisNV){
+        for(PEOSHIP_Managerment x:lisUID){
             model.addRow(new Object[] {x.getUID(),x.getProgram(),x.getDescription(),x.getCODE(),x.getAmount_Provided()});
         }
     }
@@ -611,6 +609,6 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         tfmanv.setText("");
         tftuoi.setText("");
         jbhientai.setText("...");
-        vitri=-1;
+        position=-1;
     }
 }
