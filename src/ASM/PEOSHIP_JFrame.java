@@ -43,17 +43,17 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        tfmanv = new javax.swing.JTextField();
-        tfhoten = new javax.swing.JTextField();
-        tftuoi = new javax.swing.JTextField();
-        tfemail = new javax.swing.JTextField();
-        tfluong = new javax.swing.JTextField();
+        tfmUID = new javax.swing.JTextField();
+        tfProgram = new javax.swing.JTextField();
+        tfCODE = new javax.swing.JTextField();
+        tfDescription = new javax.swing.JTextField();
+        tflAmount_Provided = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
-        btndau = new javax.swing.JButton();
-        btnlui = new javax.swing.JButton();
-        btntien = new javax.swing.JButton();
-        btncuoi = new javax.swing.JButton();
-        jbhientai = new javax.swing.JLabel();
+        btnstart = new javax.swing.JButton();
+        btnback = new javax.swing.JButton();
+        btnfoward = new javax.swing.JButton();
+        btnlast = new javax.swing.JButton();
+        jbpresent = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnnew = new javax.swing.JButton();
         btnsave = new javax.swing.JButton();
@@ -79,37 +79,37 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
 
         jLabel6.setText("Amount_Provided");
 
-        tfmanv.addActionListener(new java.awt.event.ActionListener() {
+        tfmUID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfmanvActionPerformed(evt);
+                tfmUIDActionPerformed(evt);
             }
         });
 
-        btndau.setText("|<");
-        btndau.addActionListener(new java.awt.event.ActionListener() {
+        btnstart.setText("|<");
+        btnstart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btndauActionPerformed(evt);
+                btnstartActionPerformed(evt);
             }
         });
 
-        btnlui.setText("<<");
-        btnlui.addActionListener(new java.awt.event.ActionListener() {
+        btnback.setText("<<");
+        btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnluiActionPerformed(evt);
+                btnbackActionPerformed(evt);
             }
         });
 
-        btntien.setText(">>");
-        btntien.addActionListener(new java.awt.event.ActionListener() {
+        btnfoward.setText(">>");
+        btnfoward.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btntienActionPerformed(evt);
+                btnfowardActionPerformed(evt);
             }
         });
 
-        btncuoi.setText(">|");
-        btncuoi.addActionListener(new java.awt.event.ActionListener() {
+        btnlast.setText(">|");
+        btnlast.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncuoiActionPerformed(evt);
+                btnlastActionPerformed(evt);
             }
         });
 
@@ -119,15 +119,15 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btndau)
+                .addComponent(btnstart)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnlui)
+                .addComponent(btnback)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btntien)
+                .addComponent(btnfoward)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btncuoi)
+                .addComponent(btnlast)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jbhientai, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbpresent, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -135,11 +135,11 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btndau)
-                    .addComponent(btnlui)
-                    .addComponent(btntien)
-                    .addComponent(btncuoi)
-                    .addComponent(jbhientai, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnstart)
+                    .addComponent(btnback)
+                    .addComponent(btnfoward)
+                    .addComponent(btnlast)
+                    .addComponent(jbpresent, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20))
         );
 
@@ -262,15 +262,15 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tfluong, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tflAmount_Provided, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tfmanv, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tfmUID, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tftuoi, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tfCODE, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
                                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -278,11 +278,11 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(tfemail))
+                                    .addComponent(tfDescription))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(tfhoten, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(tfProgram, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -301,23 +301,23 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tfmanv, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tfmUID, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tfhoten, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tfProgram, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tftuoi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tfCODE, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(7, 7, 7)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tfemail, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tfDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tfluong, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tflAmount_Provided, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -329,25 +329,25 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btndauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndauActionPerformed
+    private void btnstartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnstartActionPerformed
         try {
             position=0;
             display(position);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "you get error"+e);
         }
-    }//GEN-LAST:event_btndauActionPerformed
+    }//GEN-LAST:event_btnstartActionPerformed
 
-    private void btncuoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncuoiActionPerformed
+    private void btnlastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlastActionPerformed
          try {
             position=lisUID.size()-1;
             display(position);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "you get error"+e);
         }
-    }//GEN-LAST:event_btncuoiActionPerformed
+    }//GEN-LAST:event_btnlastActionPerformed
 
-    private void btnluiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnluiActionPerformed
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
         try {
             if(position>0){
             position--;
@@ -355,9 +355,9 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "you get error"+e);
         }
-    }//GEN-LAST:event_btnluiActionPerformed
+    }//GEN-LAST:event_btnbackActionPerformed
 
-    private void btntienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntienActionPerformed
+    private void btnfowardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfowardActionPerformed
          try {
             if(position<lisUID.size()-1){
             position++;
@@ -365,10 +365,10 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "you get error"+e);
         }
-    }//GEN-LAST:event_btntienActionPerformed
+    }//GEN-LAST:event_btnfowardActionPerformed
 
     private void btnnewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnewActionPerformed
-       xoatrang();
+       deleteall();
     }//GEN-LAST:event_btnnewActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
@@ -384,11 +384,11 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
-         String UID = tfmanv.getText();
-        String Program = tfhoten.getText();
-         String Description=tfemail.getText();
-        int CODE=Integer.parseInt(tftuoi.getText());
-        double Amount_Provided=Double.parseDouble(tfluong.getText());
+         String UID = tfmUID.getText();
+        String Program = tfProgram.getText();
+         String Description=tfDescription.getText();
+        int CODE=Integer.parseInt(tfCODE.getText());
+        double Amount_Provided=Double.parseDouble(tflAmount_Provided.getText());
         
         try {
            
@@ -415,7 +415,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
              JOptionPane.showMessageDialog(null, "done delete");
         }
         if(lisUID.isEmpty()){
-            xoatrang();
+            deleteall();
         }else{
             position=0;
             display(position);
@@ -446,7 +446,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             else{
                  JOptionPane.showMessageDialog(null, "UID here:"+ma);
             }
-            xoatrang();
+            deleteall();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, " you get error"+e);
         }
@@ -470,11 +470,11 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             
            try {
            
-            String ma=tfmanv.getText();
-            String hoten=tfhoten.getText();
-            String email=tfemail.getText();
-            int tuoi=Integer.parseInt(tftuoi.getText());
-            double luong=Double.parseDouble(tfluong.getText());
+            String ma=tfmUID.getText();
+            String hoten=tfProgram.getText();
+            String email=tfDescription.getText();
+            int tuoi=Integer.parseInt(tfCODE.getText());
+            double luong=Double.parseDouble(tflAmount_Provided.getText());
             
             lisUID.add(new PEOSHIP_Managerment(ma, hoten, email, tuoi, luong));
             
@@ -517,9 +517,9 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnexitActionPerformed
 
-    private void tfmanvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfmanvActionPerformed
+    private void tfmUIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfmUIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfmanvActionPerformed
+    }//GEN-LAST:event_tfmUIDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -556,16 +556,16 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btncuoi;
-    private javax.swing.JButton btndau;
+    private javax.swing.JButton btnback;
     private javax.swing.JButton btndelete;
     private javax.swing.JButton btnexit;
     private javax.swing.JButton btnfind;
-    private javax.swing.JButton btnlui;
+    private javax.swing.JButton btnfoward;
+    private javax.swing.JButton btnlast;
     private javax.swing.JButton btnnew;
     private javax.swing.JButton btnopen;
     private javax.swing.JButton btnsave;
-    private javax.swing.JButton btntien;
+    private javax.swing.JButton btnstart;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -576,23 +576,23 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JLabel jbhientai;
-    private javax.swing.JTextField tfemail;
-    private javax.swing.JTextField tfhoten;
-    private javax.swing.JTextField tfluong;
-    private javax.swing.JTextField tfmanv;
-    private javax.swing.JTextField tftuoi;
+    private javax.swing.JLabel jbpresent;
+    private javax.swing.JTextField tfCODE;
+    private javax.swing.JTextField tfDescription;
+    private javax.swing.JTextField tfProgram;
+    private javax.swing.JTextField tflAmount_Provided;
+    private javax.swing.JTextField tfmUID;
     // End of variables declaration//GEN-END:variables
 
-    private void display(int vitri) {
-       tfmanv.setText(lisUID.get(vitri).getUID());
-       tfhoten.setText(lisUID.get(vitri).getProgram());
-       tfemail.setText(lisUID.get(vitri).getDescription());
-       tftuoi.setText(lisUID.get(vitri).getCODE()+"");
-       tfluong.setText(lisUID.get(vitri).getAmount_Provided()+"");
+    private void display(int position) {
+       tfmUID.setText(lisUID.get(position).getUID());
+       tfProgram.setText(lisUID.get(position).getProgram());
+       tfDescription.setText(lisUID.get(position).getDescription());
+       tfCODE.setText(lisUID.get(position).getCODE()+"");
+       tflAmount_Provided.setText(lisUID.get(position).getAmount_Provided()+"");
        
-       jbhientai.setText("Record "+(vitri+1)+" of "+ lisUID.size());
-       jTable1.setRowSelectionInterval(vitri, vitri);
+       jbpresent.setText("Record "+(position+1)+" of "+ lisUID.size());
+       jTable1.setRowSelectionInterval(position, position);
     }
 
     private void addTable() {
@@ -602,13 +602,13 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         }
     }
 
-    private void xoatrang() {
-         tfemail.setText("");
-        tfhoten.setText("");
-        tfluong.setText("");
-        tfmanv.setText("");
-        tftuoi.setText("");
-        jbhientai.setText("...");
+    private void deleteall() {
+         tfDescription.setText("");
+        tfProgram.setText("");
+        tflAmount_Provided.setText("");
+        tfmUID.setText("");
+        tfCODE.setText("");
+        jbpresent.setText("...");
         position=-1;
     }
 }

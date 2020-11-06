@@ -32,17 +32,17 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel6" min="-2" pref="83" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="tfluong" min="-2" pref="105" max="-2" attributes="0"/>
+                              <Component id="tflAmount_Provided" min="-2" pref="105" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel2" min="-2" pref="83" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="tfmanv" min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="tfmUID" min="-2" pref="106" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel4" min="-2" pref="83" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="tftuoi" min="-2" pref="105" max="-2" attributes="0"/>
+                              <Component id="tfCODE" min="-2" pref="105" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
@@ -52,12 +52,12 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel5" min="-2" pref="83" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="tfemail" max="32767" attributes="0"/>
+                                  <Component id="tfDescription" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel3" min="-2" pref="83" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="tfhoten" min="-2" pref="186" max="-2" attributes="0"/>
+                                  <Component id="tfProgram" min="-2" pref="186" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -84,27 +84,27 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="tfmanv" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="tfmUID" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel3" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="tfhoten" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="tfProgram" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="tftuoi" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="tfCODE" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel5" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="tfemail" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="tfDescription" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel6" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="tfluong" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="tflAmount_Provided" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel1" min="-2" pref="44" max="-2" attributes="0"/>
@@ -152,18 +152,18 @@
         <Property name="text" type="java.lang.String" value="Amount_Provided"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tfmanv">
+    <Component class="javax.swing.JTextField" name="tfmUID">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfmanvActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfmUIDActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="tfhoten">
+    <Component class="javax.swing.JTextField" name="tfProgram">
     </Component>
-    <Component class="javax.swing.JTextField" name="tftuoi">
+    <Component class="javax.swing.JTextField" name="tfCODE">
     </Component>
-    <Component class="javax.swing.JTextField" name="tfemail">
+    <Component class="javax.swing.JTextField" name="tfDescription">
     </Component>
-    <Component class="javax.swing.JTextField" name="tfluong">
+    <Component class="javax.swing.JTextField" name="tflAmount_Provided">
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
 
@@ -172,15 +172,15 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btndau" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnstart" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnlui" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnback" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btntien" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnfoward" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btncuoi" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnlast" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jbhientai" min="-2" pref="85" max="-2" attributes="0"/>
+                  <Component id="jbpresent" min="-2" pref="85" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -190,11 +190,11 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btndau" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnlui" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btntien" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btncuoi" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbhientai" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="btnstart" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnback" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnfoward" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnlast" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbpresent" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
@@ -202,39 +202,39 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btndau">
+        <Component class="javax.swing.JButton" name="btnstart">
           <Properties>
             <Property name="text" type="java.lang.String" value="|&lt;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btndauActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnstartActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnlui">
+        <Component class="javax.swing.JButton" name="btnback">
           <Properties>
             <Property name="text" type="java.lang.String" value="&lt;&lt;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnluiActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnbackActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btntien">
+        <Component class="javax.swing.JButton" name="btnfoward">
           <Properties>
             <Property name="text" type="java.lang.String" value="&gt;&gt;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btntienActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnfowardActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btncuoi">
+        <Component class="javax.swing.JButton" name="btnlast">
           <Properties>
             <Property name="text" type="java.lang.String" value="&gt;|"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btncuoiActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnlastActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jbhientai">
+        <Component class="javax.swing.JLabel" name="jbpresent">
         </Component>
       </SubComponents>
     </Container>
