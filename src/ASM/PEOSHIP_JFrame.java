@@ -455,7 +455,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     private void btnopenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnopenActionPerformed
         
          try {
-            // TODO add your handling code here:
+            
             FileInputStream in = new FileInputStream("PEOSHIP_UID.txt");
             int size=in.available();
             byte[] buffer=new byte[size];
@@ -470,16 +470,16 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             
            try {
            
-            String ma=tfmUID.getText();
-            String hoten=tfProgram.getText();
-            String email=tfDescription.getText();
-            int tuoi=Integer.parseInt(tfCODE.getText());
-            double luong=Double.parseDouble(tflAmount_Provided.getText());
+            String UID=tfmUID.getText();
+            String Program=tfProgram.getText();
+            String Description=tfDescription.getText();
+            int CODE=Integer.parseInt(tfCODE.getText());
+            double Amount_Provided=Double.parseDouble(tflAmount_Provided.getText());
             
-            lisUID.add(new PEOSHIP_Managerment(ma, hoten, email, tuoi, luong));
+            lisUID.add(new PEOSHIP_Managerment(UID, Program, Description, CODE, Amount_Provided));
             
       
-            model.addRow(new Object[] {ma,hoten,tuoi,email, luong});
+            model.addRow(new Object[] {UID,Program,Description,CODE, Amount_Provided});
             position=lisUID.size()-1;
             display(position);
         } 
@@ -497,8 +497,8 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
 
     private void btnexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexitActionPerformed
        try {
-          int hoi=JOptionPane.showConfirmDialog(null, "sure want to delete");
-          if(hoi==0){
+          int question=JOptionPane.showConfirmDialog(null, "sure want to delete");
+          if(question==0){
             FileOutputStream fos = new FileOutputStream("a.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
@@ -518,7 +518,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnexitActionPerformed
 
     private void tfmUIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfmUIDActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_tfmUIDActionPerformed
 
     /**
@@ -547,7 +547,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
 
-        /* Create and display the form */
+        /* Create new form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new PEOSHIP_JFrame().setVisible(true);
