@@ -30,7 +30,7 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.mycompany.whiteboardv4.App</mainClass>
+                            <mainClass>ASM.Assigment</mainClass>
                         </configuration>
                     </execution>
                     <execution>
@@ -39,7 +39,7 @@
                             <options>
                                 <option>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</option>
                             </options>
-                            <mainClass>com.mycompany.whiteboardv4.App</mainClass>
+                            <mainClass>ASM.Assigment</mainClass>
                         </configuration>
                     </execution>
                 </executions>
