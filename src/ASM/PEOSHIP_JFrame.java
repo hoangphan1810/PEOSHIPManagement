@@ -34,9 +34,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
 
     }
 
-    /**
-   
-     */
+ 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -65,6 +63,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         btnfind = new javax.swing.JButton();
         btnopen = new javax.swing.JButton();
         btnexit = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -197,19 +196,27 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Import");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnnew, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnsave, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btndelete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
-                    .addComponent(btnfind, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnopen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnexit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnnew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnsave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btndelete, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+                    .addComponent(btnfind, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnopen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnexit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -227,6 +234,8 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
                 .addComponent(btnopen, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnexit, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -292,7 +301,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1)
                 .addGap(130, 130, 130))
         );
         layout.setVerticalGroup(
@@ -324,10 +333,10 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
                             .addComponent(tflAmount_Provided, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addGap(27, 27, 27))
         );
 
         pack();
@@ -431,12 +440,12 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btndeleteActionPerformed
 
     private void btnfindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfindActionPerformed
-       String ma=JOptionPane.showInputDialog("new sign in ");
+       String person=JOptionPane.showInputDialog("new sign in ");
         try {
 
             boolean kq=false;
             for(PEOSHIP_Managerment x:lisUID){
-                if(x.getUID().equalsIgnoreCase(ma)){
+                if(x.getUID().equalsIgnoreCase(person)){
                     position=lisUID.indexOf(x);
                     display(position);
                     kq=true;
@@ -445,10 +454,10 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
                 }
             }
             if(!kq){
-                JOptionPane.showMessageDialog(null, "cannot find this UID:  "+ma);
+                JOptionPane.showMessageDialog(null, "cannot find this UID:  "+person);
             }
             else{
-                 JOptionPane.showMessageDialog(null, "UID here:"+ma);
+                 JOptionPane.showMessageDialog(null, "UID here:"+person);
             }
             deleteall();
         } catch (Exception e) {
@@ -503,7 +512,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
        try {
           int question=JOptionPane.showConfirmDialog(null, "sure want to delete");
           if(question==0){
-            FileOutputStream fos = new FileOutputStream("a.txt");
+            FileOutputStream fos = new FileOutputStream("PEOSHIP_UID.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
             
@@ -524,6 +533,26 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     private void tfmUIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfmUIDActionPerformed
         
     }//GEN-LAST:event_tfmUIDActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+import java.io.FileReader;
+import com.opencsv.CSVReader;
+public class ReadFromCSV {
+   public static void main(String args[]) throws Exception {
+      //Instantiating the CSVReader class
+      CSVReader reader = new CSVReader(new FileReader("C:\\Users\\hoang\\Desktop\\New folder (2)\\IST261-project\\PEOSHIPSAMPHIB.csv"));
+      //Reading the contents of the csv file
+      StringBuffer buffer = new StringBuffer();
+      String line[];
+      while ((line = reader.readNext()) != null) {
+         for(int i = 0; i<line.length; i++) {
+            System.out.print(line[i]+" ");
+         }
+         System.out.println(" ");
+      }
+   }
+}        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -546,10 +575,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(PEOSHIP_JFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+        
 
         /* Create new form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -570,6 +596,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnopen;
     private javax.swing.JButton btnsave;
     private javax.swing.JButton btnstart;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

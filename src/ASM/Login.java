@@ -1,6 +1,10 @@
-/*
-
- */
+/**
+	File name: IST261_project
+	Short description: PEOSHIP_Management class
+	IST 261 Assignment: PEOSHIP MANAGERMENT
+	@author Hoang Phan
+	Oct 1st, 2020
+*/
 package ASM;
 
 import javax.swing.JOptionPane;
@@ -109,7 +113,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
-        // TODO add your handling code here:
+        
         if(txt_username.getText().equals("")|| txt_pass.getText().equals("") ){
             JOptionPane.showMessageDialog(null, "You cannot let blank in User Name and Password","Empty", JOptionPane.WARNING_MESSAGE);
         }
