@@ -14,7 +14,11 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import jdk.nashorn.internal.runtime.regexp.joni.exception.JOniException;
+//import jdk.nashorn.internal.runtime.regexp.joni.exception.JOniException;
+import java.io.FileReader;
+import com.opencsv.CSVReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  *
@@ -535,23 +539,21 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_tfmUIDActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-import java.io.FileReader;
-import com.opencsv.CSVReader;
-public class ReadFromCSV {
-   public static void main(String args[]) throws Exception {
-      //Instantiating the CSVReader class
-      CSVReader reader = new CSVReader(new FileReader("C:\\Users\\hoang\\Desktop\\New folder (2)\\IST261-project\\PEOSHIPSAMPHIB.csv"));
-      //Reading the contents of the csv file
-      StringBuffer buffer = new StringBuffer();
-      String line[];
-      while ((line = reader.readNext()) != null) {
-         for(int i = 0; i<line.length; i++) {
-            System.out.print(line[i]+" ");
-         }
-         System.out.println(" ");
+      try {
+        CSVReader reader = new CSVReader(new FileReader("C:\\Users\\hoang\\Desktop\\New folder (2)\\IST261-project\\PEOSHIPSAMPHIB.csv"));
+        StringBuffer buffer = new StringBuffer();
+        String line[];
+        while ((line = reader.readNext()) != null) {
+             for(int i = 0; i<line.length; i++) {
+                System.out.print(line[i]+" ");
+            }
+            System.out.println(" ");
+        }
+      } catch (FileNotFoundException e) {
+          
+      } catch (IOException e) {
+          
       }
-   }
-}        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
