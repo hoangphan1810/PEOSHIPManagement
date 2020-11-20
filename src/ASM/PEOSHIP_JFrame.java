@@ -543,8 +543,10 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
         CSVReader reader = new CSVReader(new FileReader("C:\\Users\\hoang\\Desktop\\New folder (2)\\IST261-project\\PEOSHIPSAMPHIB.csv"));
         StringBuffer buffer = new StringBuffer();
         String line[];
+        String words[];
         while ((line = reader.readNext()) != null) {
              for(int i = 0; i<line.length; i++) {
+                
                 System.out.print(line[i]+" ");
             }
             System.out.println(" ");
