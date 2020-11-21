@@ -7,6 +7,7 @@
 */
 package ASM;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -16,9 +17,13 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 //import jdk.nashorn.internal.runtime.regexp.joni.exception.JOniException;
 import java.io.FileReader;
-import com.opencsv.CSVReader;
+//import com.opencsv.CSVReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -152,7 +157,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        btnnew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/new-file-icon.png"))); // NOI18N
+        btnnew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/new-file-icon.png"))); // NOI18N
         btnnew.setText("New");
         btnnew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +165,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
-        btnsave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/icon_save.png"))); // NOI18N
+        btnsave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_save.png"))); // NOI18N
         btnsave.setText("Save");
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,7 +173,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
-        btndelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/delete-file-icon.png"))); // NOI18N
+        btndelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/delete-file-icon.png"))); // NOI18N
         btndelete.setText("Delete");
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,7 +181,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
-        btnfind.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/Search-icon.png"))); // NOI18N
+        btnfind.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Search-icon.png"))); // NOI18N
         btnfind.setText("Find");
         btnfind.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,7 +189,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
-        btnopen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/open-file-icon.png"))); // NOI18N
+        btnopen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/open-file-icon.png"))); // NOI18N
         btnopen.setText("Add");
         btnopen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,7 +197,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
-        btnexit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/cancel-icon.png"))); // NOI18N
+        btnexit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel-icon.png"))); // NOI18N
         btnexit.setText("Exit");
         btnexit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -539,23 +544,22 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_tfmUIDActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      try {
-        CSVReader reader = new CSVReader(new FileReader("C:\\Users\\hoang\\Desktop\\New folder (2)\\IST261-project\\PEOSHIPSAMPHIB.csv"));
-        StringBuffer buffer = new StringBuffer();
-        String line[];
-        String words[];
-        while ((line = reader.readNext()) != null) {
-             for(int i = 0; i<line.length; i++) {
-                
-                System.out.print(line[i]+" ");
+
+        try {
+            InputStream inputStream = getClass().getResourceAsStream("/txt/PEOSHIPSAMPHIB.csv");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+            String line;
+            String words[];
+            while ( (line = reader.readLine()) != null) {
+                words = line.split(",");
+                for( String word : words) {
+                    System.out.print(word + "=");
+                }
+                System.out.println();
             }
-            System.out.println(" ");
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
         }
-      } catch (FileNotFoundException e) {
-          
-      } catch (IOException e) {
-          
-      }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
