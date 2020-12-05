@@ -22,6 +22,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,11 +34,12 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
     ArrayList<PEOSHIP_Managerment> lisUID=new ArrayList<>();
     int position;
     DefaultTableModel model=new DefaultTableModel();
-
+    ArrayList<String> data;
     /**
      * Creates new form Hoang Phan
      */
     public PEOSHIP_JFrame() {
+        this.data = new ArrayList<>();
         initComponents();
         model=(DefaultTableModel) jTable1.getModel();
 
@@ -157,7 +159,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        btnnew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/new-file-icon.png"))); // NOI18N
+        btnnew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/new-file-icon.png"))); // NOI18N
         btnnew.setText("New");
         btnnew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +167,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
-        btnsave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icon_save.png"))); // NOI18N
+        btnsave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/icon_save.png"))); // NOI18N
         btnsave.setText("Save");
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,7 +175,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
-        btndelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/delete-file-icon.png"))); // NOI18N
+        btndelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/delete-file-icon.png"))); // NOI18N
         btndelete.setText("Delete");
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,7 +183,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
-        btnfind.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Search-icon.png"))); // NOI18N
+        btnfind.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/Search-icon.png"))); // NOI18N
         btnfind.setText("Find");
         btnfind.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,7 +191,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
-        btnopen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/open-file-icon.png"))); // NOI18N
+        btnopen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/open-file-icon.png"))); // NOI18N
         btnopen.setText("Add");
         btnopen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,7 +199,7 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             }
         });
 
-        btnexit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel-icon.png"))); // NOI18N
+        btnexit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ASM/icon/cancel-icon.png"))); // NOI18N
         btnexit.setText("Exit");
         btnexit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -549,13 +551,10 @@ public class PEOSHIP_JFrame extends javax.swing.JFrame {
             InputStream inputStream = getClass().getResourceAsStream("/txt/PEOSHIPSAMPHIB.csv");
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             String line;
-            String words[];
-            while ( (line = reader.readLine()) != null) {
-                words = line.split(",");
-                for( String word : words) {
-                    System.out.print(word + "=");
-                }
-                System.out.println();
+            ArrayList<String> list;
+            while ((line= reader.readLine()) != null){
+                list = new ArrayList<String>(Arrays.asList(line.split(",")));
+                this.data.addAll(list);
             }
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
